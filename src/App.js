@@ -6,9 +6,9 @@ const App = () => {
   return (
     <div>
       <div className="first">
-        <CountButton incrementBy={6} buttonColor={"blue"} />
-        <CountButton incrementBy={800} buttonColor={"red"} />
-        <CountButton incrementBy={5} buttonColor={"green"} />
+        <CountButton incrementBy={6} />
+        <CountButton incrementBy={800} />
+        <CountButton incrementBy={5} />
       </div>
       <br></br>
       <div className="second">

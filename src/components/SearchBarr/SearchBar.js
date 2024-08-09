@@ -34,12 +34,7 @@ const SearchBar = () => {
 
   return (
     <div>
-      <input
-        type="text"
-        className="put-text"
-        value={searchValue}
-        onChange={handleInputChange}
-      />
+      <input type="text" value={searchValue} onChange={handleInputChange} />
       <br />
       {shouldDisplayButton && <button onClick={handleClearClick}>clear</button>}
       <ul>
