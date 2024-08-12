@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
 
-const products = [
-  "tooth brush",
-  "tooth paste",
-  "mouth wash",
-  "dental floss",
-  "mouth guard",
-];
+// const products = [
+//   "tooth brush",
+//   "tooth paste",
+//   "mouth wash",
+//   "dental floss",
+//   "mouth guard",
+// ];
 
 const SearchBar = () => {
-  const [searchValue, setSearchValue] = useState(" ");
+  const [searchValue, setSearchValue] = useState("type to search....");
 
   const handleInputChange = (event) => {
-    // setSearchValue(event.target.value);
+    setSearchValue(event.target.value);
   };
 
   const handleClearClick = () => {
-    // setSearchValue("");
+    setSearchValue("");
   };
 
   // console.log(
@@ -28,20 +28,21 @@ const SearchBar = () => {
 
   const shouldDisplayButton = searchValue.length > 0;
 
-  const filterProducts = products.filter((product) => {
-    return product.includes(searchValue);
-  });
+  // const filterProducts = products.filter((product) => {
+  //   return product.includes(searchValue);
+  // });
 
   return (
     <div>
       <input type="text" value={searchValue} onChange={handleInputChange} />
+
       <br />
-      {shouldDisplayButton && <button onClick={handleClearClick}>clear</button>}
-      <ul>
+      <button onClick={handleClearClick}>clear</button>
+      {/* <ul>
         {filterProducts.map((product) => {
           return <li key={product}>{product}</li>;
-        })}
-      </ul>
+        })} */}
+      {/* </ul> */}
     </div>
   );
 };
